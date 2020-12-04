@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <title>Rock paper and scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1> Rock Paper Scissors  </h1>
+      </header>
+
+      <!---Restart Game Button-->
+      <div>
+        <button id="restartButton" onClick="document.location.reload(true)">Restart Game</button>
+      </div>
+     
+         <!---Both players scores --->
+         <section  class="score">          
+            <p> You: <span id="score"> 0</span></p>
+            <p> Computer: <span id="comscore"> 0</span></p>
+         </section> 
+
+      <!--- Game-->   
+      <main id="main">
+
+          <!--Select Rock Section-->
+          <section>
+            <button class="btn-circle btn-rock pick" data-choice = "rock">
+                <object id="rock_test" class="wrapper" type="image/svg+xml" data="image.svg">
+                  <img class="icon" src="./images/icon-rock.svg" />
+                </object>
+            </button>
+        </section>
+         <!--Select Rock End-->
+         
+        <!--Select Paper Section-->
+          <section >
+              <button class="btn-circle btn-paper pick" data-choice = "paper">
+                  <object class="wrapper" type="image/svg+xml" data="image.svg">
+                    <img class="icon" src="./images/icon-paper.svg" />
+                  </object>
+              </button>
+          </section>
+             <!--Select Paper End-->
+        
+            <!--Select Scissors Section-->  
+          <section>
+              <button class="btn-circle btn-scissors pick" data-choice = "scissors" >
+                    <object class="wrapper" type="image/svg+xml" data="image.svg">
+                      <img class="icon" src="./images/icon-scissors.svg" />
+                    </object>   
+              </button>
+            </section> 
+          <!--Select Scissors End-->
+          
+      </main>
+    </div>
+    <!--Show selected choices-->
+    <div class="selection" id="selection">
+
+      <!--Display what user picked-->
+      <div>
+        <h2 id="labelYouPicked">You Picked</h2>
+        <button class="btn-circle btn-paper" id="user_select">
+            <object class="wrapper">
+              <img class="icon" src="./images/icon-paper.svg" alt="paper"/>
+            </object>
+        </button>
+     </div>
+
+      <!--Display who win-->
+      <div class="go-down">        
+        <p class="big-text">          
+          <span id="winner">win</span>
+        </p>
+          <br />
+
+          <!--Play Game Again -->
+        <button class="btn" id="reset">Play Again</button>
+      </div>
+
+       <!--Display what user picked-->
+      <div>        
+       <h2 id="labelComputerPicked">Computer Picked</h2>
+       <button class="btn-circle btn-paper" id="computer_select">
+          <object class="wrapper">
+            <img class="icon" src="./images/icon-paper.svg" alt="paper"/>
+          </object>
+       </button>
+      </div> 
+    </div>
+
+    <!--External script file-->
+    <script src="./js/script.js"></script>
+  </body>
+  
+</html>
